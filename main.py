@@ -212,7 +212,7 @@ class DCGAN():
                 break
 
 
-path = "ancestors/acorn/acorn2.JPEG"  # clean image path
+path = "acorn2.JPEG"  # clean image
 target = 'rhinoceros_beetle'  # target category label
 targx = 306   # target category index no
 anc = 988    # clean image index no
