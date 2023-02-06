@@ -119,6 +119,7 @@ class DCGAN():
         G = InstanceNormalization()(G)
         G = Activation('relu')(G)
         G = layers.add([G*2.25/255, inputs])  
+        # Multiplying 2.25/255 = 0.01 will drastically reduce the magnitude of the noise, making it invisible. You can increase                                                 # this value, which would help advGAN_HR to generate the adversarial image more easily, but the visual quality will decrease. 
         return G
 
 
