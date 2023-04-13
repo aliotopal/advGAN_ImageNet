@@ -180,7 +180,7 @@ class DCGAN():
         x_train = (x_train * 2. / 255 - 1).reshape(len(x_train), 224, 224, 3)  # normalize images to [-1, 1]
         y_train = np.full(1, anc)
 
-        epochs = 200
+        epochs = EPOCH
         for epoch in range(epochs):
             print("EPOCH: ", epoch)
             Gx = self.G.predict(x_train)
@@ -212,7 +212,7 @@ class DCGAN():
                 Img.save(filename, 'png')
                 break
 
-
+EPOCH = 200
 path = "acorn2.JPEG"  # clean image
 target = 'rhinoceros_beetle'  # target category label
 targx = 306   # target category index no
